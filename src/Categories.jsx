@@ -27,6 +27,10 @@ function Categories() {
       url: "https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple",
       label: "Science & Nature",
     },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
+      label: "General(Mix)",
+    },
   ]
 
   return (
@@ -35,7 +39,7 @@ function Categories() {
       <div className='_categories'>
         {apisData.map((data) => {
           return (
-            <Link key={data.url} to='/question'>
+            <Link key={data.url} to='/question' state={{ apiUrl: data.url }}>
               <h2>{data.label}</h2>
             </Link>
           )
