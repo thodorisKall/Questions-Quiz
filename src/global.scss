@@ -8,6 +8,18 @@ body {
   background-color: grey;
 }
 
-._categories{
+._categories {
   border: 2px solid red;
+}
+
+.answer--btn {
+  background-color: whitesmoke;
+}
+
+.correct--btn {
+  background-color: green;
+}
+
+.wrong--btn {
+  background-color: red;
 }
