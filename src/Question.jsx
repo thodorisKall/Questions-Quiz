@@ -7,6 +7,9 @@ function Question() {
   const apiUrl = location.state?.apiUrl
   const [questionsUrl, setQuestionsUrl] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isCorrect, setIsCorrect] = useState(null)
+  const [selectedAnswer, setSelectedAnswer] = useState("")
+  const [shuffleAsnwers, setShuffleAsnwers] = useState([])
 
   useEffect(() => {
     fetch(apiUrl)
@@ -21,6 +24,18 @@ function Question() {
       .catch((err) => console.error(err))
   }, [])
 
+  useEffect(() => {
+    if (questionsUrl.length > 0) {
+      const answers = [
+        ...questionsUrl[currentIndex].incorrect_answers,
+        questionsUrl[currentIndex].correct_answer,
+      ]
+      setShuffleAsnwers(answers.sort(() => Math.random() - 0.5))
+    }
+  }, [questionsUrl, currentIndex])
+
+  console.log(shuffleAsnwers)
+
   if (questionsUrl.length === 0) {
     return <div>Loading...</div>
   }
@@ -28,22 +43,29 @@ function Question() {
   const handleNext = () => {
     if (currentIndex < questionsUrl.length - 1) {
       setCurrentIndex(currentIndex + 1)
+      setIsCorrect(null)
     }
   }
 
   const handlePrevious = () => {
     if (currentIndex >= 0) {
       setCurrentIndex(currentIndex - 1)
+      setIsCorrect(null)
     }
   }
 
-  const handleAnswer = () => {}
-
-  const answers = [
-    ...questionsUrl[currentIndex].incorrect_answers,
-    questionsUrl[currentIndex].correct_answer,
-  ]
-  const shuffleAsnwers = answers.sort(() => Math.random() - 0.5)
+  const handleAnswer = (event) => {
+    const answer = event.target.textContent
+    setSelectedAnswer(answer)
+    console.log(answer)
+    if (answer === questionsUrl[currentIndex].correct_answer) {
+      setIsCorrect(true)
+      console.log("Correct answer!!!")
+    } else {
+      setIsCorrect(false)
+      console.log("Wrong answer!!! Sorry.........")
+    }
+  }
 
   return (
     <div>
@@ -57,7 +79,20 @@ function Question() {
             {shuffleAsnwers.map((answer) => {
               return (
                 <div key={answer}>
-                  <button>{answer}</button>
+                  <button
+                    className={
+                      selectedAnswer === answer
+                        ? isCorrect === null
+                          ? "answer--btn"
+                          : isCorrect
+                          ? "correct--btn"
+                          : "wrong--btn"
+                        : "answer--btn"
+                    }
+                    onClick={handleAnswer}
+                  >
+                    {answer}
+                  </button>
                 </div>
               )
             })}
