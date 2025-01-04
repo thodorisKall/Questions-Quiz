@@ -10,6 +10,8 @@ function Question() {
   const [isCorrect, setIsCorrect] = useState(null)
   const [selectedAnswer, setSelectedAnswer] = useState("")
   const [shuffleAsnwers, setShuffleAsnwers] = useState([])
+  const [wrongAnswers, setWrongAnswers] = useState(0)
+  const [correctAnswers, setCorrectAnswers] = useState(0)
 
   useEffect(() => {
     fetch(apiUrl)
@@ -33,8 +35,6 @@ function Question() {
       setShuffleAsnwers(answers.sort(() => Math.random() - 0.5))
     }
   }, [questionsUrl, currentIndex])
-
-  console.log(shuffleAsnwers)
 
   if (questionsUrl.length === 0) {
     return <div>Loading...</div>
@@ -60,10 +60,12 @@ function Question() {
     console.log(answer)
     if (answer === questionsUrl[currentIndex].correct_answer) {
       setIsCorrect(true)
-      console.log("Correct answer!!!")
+      setCorrectAnswers(correctAnswers + 1)
+      console.log("Correct answer!!!", correctAnswers)
     } else {
       setIsCorrect(false)
-      console.log("Wrong answer!!! Sorry.........")
+      setWrongAnswers(wrongAnswers + 1)
+      console.log("Wrong answer!!! Sorry.........", wrongAnswers)
     }
   }
 
@@ -100,14 +102,14 @@ function Question() {
         </div>
       </div>
       <div>
+        <button onClick={() => handlePrevious()} disabled={currentIndex === 0}>
+          Previous
+        </button>
         <button
           onClick={() => handleNext()}
           disabled={currentIndex === questionsUrl.length - 1}
         >
           Next
-        </button>
-        <button onClick={() => handlePrevious()} disabled={currentIndex === 0}>
-          Previous
         </button>
       </div>
     </div>
