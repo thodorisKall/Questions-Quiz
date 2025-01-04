@@ -5,6 +5,7 @@ import Categories from "./Categories"
 import Starter from "./Starter"
 import Question from "./Question"
 import Nav from "./Nav"
+import Results from "./Results"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Starter />} />
           <Route path='/categories' element={<Categories />} />
           <Route path='/question' element={<Question />} />
+          <Route path='/results' element={<Results />} />
         </Routes>
       </Router>
     </div>
