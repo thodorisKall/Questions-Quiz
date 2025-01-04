@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import Categories from "./Categories"
 import Starter from "./Starter"
 import Question from "./Question"
+import Nav from "./Nav"
 
 function App() {
   return (
     <div className='App'>
       <Router>
+        <Nav />
         <Routes>
           <Route path='/' element={<Starter />} />
           <Route path='/categories' element={<Categories />} />
