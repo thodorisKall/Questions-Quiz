@@ -1,9 +1,10 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 function Question() {
   const location = useLocation()
+  const navigate = useNavigate()
   const apiUrl = location.state?.apiUrl
   const [questionsUrl, setQuestionsUrl] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -44,6 +45,10 @@ function Question() {
     if (currentIndex < questionsUrl.length - 1) {
       setCurrentIndex(currentIndex + 1)
       setIsCorrect(null)
+    } else if (currentIndex === questionsUrl.length - 1) {
+      navigate("/results", {
+        state: { correctAnswers, wrongAnswers },
+      })
     }
   }
 
@@ -107,7 +112,7 @@ function Question() {
         </button>
         <button
           onClick={() => handleNext()}
-          disabled={currentIndex === questionsUrl.length - 1}
+          // disabled={currentIndex === questionsUrl.length - 1}
         >
           Next
         </button>
