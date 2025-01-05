@@ -50,7 +50,7 @@ function Question() {
       setIsCorrect(null)
     } else if (currentIndex === questionsUrl.length - 1) {
       navigate("/results", {
-        state: { correctAnswers, wrongAnswers },
+        state: { correctAnswers, wrongAnswers, categoryName },
       })
     }
   }
