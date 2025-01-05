@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Categories() {
   const apisData = [
@@ -49,11 +49,26 @@ function Categories() {
     },
   ]
 
+  const navigate = useNavigate()
+
+  const handleSelectChange = (event) => {
+    const selectedValue = event.target.value
+    if (selectedValue) {
+      const selectedOption = apisData.find((data) => data.url === selectedValue)
+      navigate("/question", {
+        state: {
+          apiUrl: selectedOption.url,
+          categoryName: selectedOption.label,
+        },
+      })
+    }
+  }
+
   return (
     <div>
       Categories
       <div className='_categories'>
-        {apisData.map((data) => {
+        {apisData.slice(0, 6).map((data) => {
           return (
             <Link
               key={data.url}
@@ -64,6 +79,19 @@ function Categories() {
             </Link>
           )
         })}
+      </div>
+      <div className='_categories'>
+        <label>More Categories:</label>
+        <select onChange={handleSelectChange}>
+          <option value=''>Select a category --</option>
+          {apisData.slice(6).map((data) => {
+            return (
+              <option key={data.url} value={data.url}>
+                {data.label}
+              </option>
+            )
+          })}
+        </select>
       </div>
     </div>
   )
