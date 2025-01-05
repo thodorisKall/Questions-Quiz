@@ -31,6 +31,22 @@ function Categories() {
       url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
       label: "General(Mix)",
     },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple",
+      label: "Vehicles",
+    },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple",
+      label: "History",
+    },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=19&difficulty=easy&type=multiple",
+      label: "Mathematics",
+    },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
+      label: "Computers",
+    },
   ]
 
   return (
