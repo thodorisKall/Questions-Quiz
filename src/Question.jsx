@@ -6,6 +6,7 @@ function Question() {
   const location = useLocation()
   const navigate = useNavigate()
   const apiUrl = location.state?.apiUrl
+  const categoryName = location.state?.categoryName
   const [questionsUrl, setQuestionsUrl] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isCorrect, setIsCorrect] = useState(null)
@@ -13,6 +14,8 @@ function Question() {
   const [shuffleAsnwers, setShuffleAsnwers] = useState([])
   const [wrongAnswers, setWrongAnswers] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState(0)
+
+  //console.log(categoryName)
 
   useEffect(() => {
     fetch(apiUrl)
@@ -76,6 +79,7 @@ function Question() {
 
   return (
     <div>
+      <h3>Category: {categoryName}</h3>
       <h3>Question</h3>
 
       <div>
@@ -110,12 +114,7 @@ function Question() {
         <button onClick={() => handlePrevious()} disabled={currentIndex === 0}>
           Previous
         </button>
-        <button
-          onClick={() => handleNext()}
-          // disabled={currentIndex === questionsUrl.length - 1}
-        >
-          Next
-        </button>
+        <button onClick={() => handleNext()}>Next</button>
       </div>
     </div>
   )

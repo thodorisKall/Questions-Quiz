@@ -39,7 +39,11 @@ function Categories() {
       <div className='_categories'>
         {apisData.map((data) => {
           return (
-            <Link key={data.url} to='/question' state={{ apiUrl: data.url }}>
+            <Link
+              key={data.url}
+              to='/question'
+              state={{ apiUrl: data.url, categoryName: data.label }}
+            >
               <h2>{data.label}</h2>
             </Link>
           )
