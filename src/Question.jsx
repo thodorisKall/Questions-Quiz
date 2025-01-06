@@ -77,6 +77,12 @@ function Question() {
     }
   }
 
+  function decodeHtmlEntities(text) {
+    const txt = document.createElement("textarea")
+    txt.innerHTML = text
+    return txt.value
+  }
+
   return (
     <div>
       <h3>Category: {categoryName}</h3>
@@ -84,7 +90,7 @@ function Question() {
 
       <div>
         <div>
-          <h4>{questionsUrl[currentIndex].question}</h4>
+          <h4>{decodeHtmlEntities(questionsUrl[currentIndex].question)}</h4>
           <h5>Answers</h5>
           <div>
             {shuffleAsnwers.map((answer) => {
@@ -102,7 +108,7 @@ function Question() {
                     }
                     onClick={handleAnswer}
                   >
-                    {answer}
+                    {decodeHtmlEntities(answer)}
                   </button>
                 </div>
               )
