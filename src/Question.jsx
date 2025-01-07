@@ -15,8 +15,6 @@ function Question() {
   const [wrongAnswers, setWrongAnswers] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState(0)
 
-  //console.log(categoryName)
-
   useEffect(() => {
     fetch(apiUrl)
       .then((res) => res.json())
@@ -90,7 +88,11 @@ function Question() {
 
       <div>
         <div>
-          <h4>{decodeHtmlEntities(questionsUrl[currentIndex].question)}</h4>
+          <h4>
+            {`${currentIndex + 1}#  ${decodeHtmlEntities(
+              questionsUrl[currentIndex].question
+            )}`}
+          </h4>
           <h5>Answers</h5>
           <div>
             {shuffleAsnwers.map((answer) => {
