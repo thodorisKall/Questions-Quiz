@@ -68,7 +68,7 @@ function Question() {
   const handleAnswer = (event) => {
     const answer = event.target.textContent
     setSelectedAnswer(answer)
-    console.log(answer)
+
     if (answer === questionsUrl[currentIndex].correct_answer) {
       setIsCorrect(true)
       setCorrectAnswers(correctAnswers + 1)
