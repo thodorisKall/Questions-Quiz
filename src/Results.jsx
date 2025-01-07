@@ -29,9 +29,16 @@ function Results() {
   return (
     <div>
       Results of Quiz
+      <h2>
+        {wrongAnswers > correctAnswers
+          ? "You Lost"
+          : wrongAnswers < correctAnswers
+          ? "You Win!!!"
+          : "Draw!"}
+      </h2>
       <h3>Category: {categoryName}</h3>
-      <h2>Corrected :{correctAnswers}</h2>
-      <h2>Wrong: {wrongAnswers}</h2>
+      <h3>Corrected : {correctAnswers}</h3>
+      <h3>Wrong : {wrongAnswers}</h3>
     </div>
   )
 }
