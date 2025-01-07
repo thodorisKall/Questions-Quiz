@@ -42,7 +42,7 @@ function Question() {
   }, [questionsUrl, currentIndex])
 
   if (questionsUrl.length === 0) {
-    return <div>Loading...</div>
+    return <div className='loader'></div>
   }
 
   const handleNext = () => {
