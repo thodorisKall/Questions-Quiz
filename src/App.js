@@ -6,6 +6,7 @@ import Starter from "./Starter"
 import Question from "./Question"
 import Nav from "./Nav"
 import Results from "./Results"
+import Footer from "./Footer"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/question' element={<Question />} />
           <Route path='/results' element={<Results />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
