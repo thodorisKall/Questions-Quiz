@@ -14,6 +14,8 @@ function Question() {
   const [shuffleAsnwers, setShuffleAsnwers] = useState([])
   const [wrongAnswers, setWrongAnswers] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState(0)
+  const [correctAnswer, setCorrectAnswer] = useState(null)
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false)
 
   useEffect(() => {
     fetch(apiUrl)
@@ -35,6 +37,7 @@ function Question() {
         questionsUrl[currentIndex].correct_answer,
       ]
       setShuffleAsnwers(answers.sort(() => Math.random() - 0.5))
+      setCorrectAnswer(questionsUrl[currentIndex].correct_answer)
     }
   }, [questionsUrl, currentIndex])
 
@@ -46,6 +49,7 @@ function Question() {
     if (currentIndex < questionsUrl.length - 1) {
       setCurrentIndex(currentIndex + 1)
       setIsCorrect(null)
+      setSelectedAnswer("")
     } else if (currentIndex === questionsUrl.length - 1) {
       navigate("/results", {
         state: { correctAnswers, wrongAnswers, categoryName },
@@ -57,6 +61,7 @@ function Question() {
     if (currentIndex >= 0) {
       setCurrentIndex(currentIndex - 1)
       setIsCorrect(null)
+      setSelectedAnswer("")
     }
   }
 
@@ -67,12 +72,14 @@ function Question() {
     if (answer === questionsUrl[currentIndex].correct_answer) {
       setIsCorrect(true)
       setCorrectAnswers(correctAnswers + 1)
-      console.log("Correct answer!!!", correctAnswers)
     } else {
       setIsCorrect(false)
       setWrongAnswers(wrongAnswers + 1)
-      console.log("Wrong answer!!! Sorry.........", wrongAnswers)
     }
+
+    setTimeout(() => {
+      setShowCorrectAnswer(true)
+    }, 500)
   }
 
   function decodeHtmlEntities(text) {
@@ -100,15 +107,16 @@ function Question() {
                 <div key={answer}>
                   <button
                     className={
-                      selectedAnswer === answer
-                        ? isCorrect === null
-                          ? "answer--btn"
-                          : isCorrect
-                          ? "correct--btn"
-                          : "wrong--btn"
+                      isCorrect === null
+                        ? "answer--btn"
+                        : answer === correctAnswer && showCorrectAnswer
+                        ? "correct--btn"
+                        : selectedAnswer === answer
+                        ? "wrong--btn"
                         : "answer--btn"
                     }
                     onClick={handleAnswer}
+                    disabled={isCorrect !== null}
                   >
                     {decodeHtmlEntities(answer)}
                   </button>
