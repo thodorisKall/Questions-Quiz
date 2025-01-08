@@ -1,5 +1,6 @@
 import React from "react"
 import { useState } from "react"
+import { SlInfo } from "react-icons/sl"
 
 function Footer() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -8,13 +9,15 @@ function Footer() {
   const closeModal = () => setModalOpen(false)
 
   return (
-    <div>
+    <footer>
       <div>
-        <h3 id='developed'>Developed by Thodoris Kallioras 2025</h3>
+        <h3 id='developed'>
+          Developed by <span>Thodoris Kallioras</span> 2025
+        </h3>
       </div>
-      <div>
+      <div className='footer__info'>
         <button id='info' onClick={openModal}>
-          Info
+          <SlInfo />
         </button>
         <h4>More</h4>
       </div>
@@ -38,7 +41,7 @@ function Footer() {
           </div>
         </div>
       )}
-    </div>
+    </footer>
   )
 }
 
