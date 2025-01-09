@@ -42,7 +42,7 @@ nav {
   background-color: #1d2951;
 }
 .starter h2 {
-  color: white;
+  color: #f8f8ff;
   font-size: 40px;
 }
 
@@ -74,15 +74,15 @@ nav {
 }
 
 .answer--btn {
-  background-color: whitesmoke;
+  background-color: #d3d3d3;
 }
 
 .correct--btn {
-  background-color: green;
+  background-color: #00a550;
 }
 
 .wrong--btn {
-  background-color: red;
+  background-color: #fd5e53;
 }
 
 .loader {
@@ -113,7 +113,7 @@ footer {
   background-color: #1d2951;
 }
 footer #developed {
-  color: white;
+  color: #f8f8ff;
 }
 footer #developed span {
   color: #0abab5;
@@ -127,7 +127,7 @@ footer .footer__info {
 footer .footer__info #info {
   font-size: 16px;
   background-color: #007bff;
-  color: white;
+  color: #f8f8ff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -150,7 +150,7 @@ footer .footer__info #info:hover {
 }
 
 .modal-box {
-  background: white;
+  background: #f8f8ff;
   padding: 20px;
   width: 300px;
   border-radius: 10px;

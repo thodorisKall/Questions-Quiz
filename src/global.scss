@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   padding: 0;
   margin: 0;
@@ -31,7 +33,7 @@ body {
 
 // Nav
 nav {
-  background-color: #1d2951;
+  background-color: $dark-blue;
 }
 
 // Starter
@@ -42,10 +44,10 @@ nav {
   justify-content: space-around;
   align-items: center;
   // border: 1px solid red;
-  background-color: #1d2951;
+  background-color: $dark-blue;
 
   h2 {
-    color: white;
+    color: $white;
     font-size: 40px;
   }
 }
@@ -54,7 +56,7 @@ nav {
   // border: 1px solid red;
   width: 500px;
   height: auto;
-  background: rgba(116, 108, 192, 0.3);
+  background: rgba($purple, 0.3);
   border-radius: 100px / 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   img {
@@ -65,13 +67,13 @@ nav {
 
 .starter--btn {
   font-size: 20px;
-  background-color: #0abab5;
+  background-color: $cyan;
   border-radius: 18px;
   padding: 5px 20px;
 
   a {
     text-decoration: none;
-    color: #1d2951;
+    color: $dark-blue;
   }
 }
 
@@ -82,18 +84,18 @@ nav {
 }
 
 .answer--btn {
-  background-color: whitesmoke;
+  background-color: $light-grey;
 }
 
 .correct--btn {
-  background-color: green;
+  background-color: $green;
 }
 
 .wrong--btn {
-  background-color: red;
+  background-color: $red;
 }
 
-// ----------------------
+// Loader
 
 .loader {
   color: #000;
@@ -122,14 +124,13 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
-  background-color: #1d2951;
-  //  border: 1px solid red;
+  background-color: $dark-blue;
 
   #developed {
-    color: white;
+    color: $white;
 
     span {
-      color: #0abab5;
+      color: $cyan;
     }
   }
 
@@ -142,7 +143,7 @@ footer {
     #info {
       font-size: 16px;
       background-color: #007bff;
-      color: white;
+      color: $white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -168,7 +169,7 @@ footer {
 }
 
 .modal-box {
-  background: white;
+  background: $white;
   padding: 20px;
   width: 300px;
   border-radius: 10px;
