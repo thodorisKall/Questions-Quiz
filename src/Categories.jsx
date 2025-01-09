@@ -15,7 +15,7 @@ function Categories() {
 
     {
       url: "https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple",
-      label: "Science & Nature",
+      label: "Science",
     },
 
     {
@@ -68,22 +68,24 @@ function Categories() {
   }
 
   return (
-    <div>
-      Categories
-      <div className='_categories'>
+    <div className='categories'>
+      <div className='categories__icons'>
         {apisData.slice(0, 6).map((data) => {
           return (
             <Link
-              key={data.url}
               to='/question'
+              key={data.url}
               state={{ apiUrl: data.url, categoryName: data.label }}
+              className={`${data.label} categories__box`}
             >
-              <h2>{data.label}</h2>
+              <div>
+                <h2>{data.label}</h2>
+              </div>
             </Link>
           )
         })}
       </div>
-      <div className='_categories'>
+      <div className='categories__list'>
         <label>More Categories:</label>
         <select onChange={handleSelectChange}>
           <option value=''>Select a category --</option>
