@@ -79,8 +79,59 @@ nav {
 
 // -----------------
 
-._categories {
-  border: 2px solid red;
+.categories {
+  flex-grow: 1;
+  background-color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .categories__icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+
+    .categories__box {
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      font-size: 14px;
+      width: 150px;
+      height: 150px;
+      background-color: rgba($purple, 0.3);
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: auto;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    .Sports {
+      background-image: url("../public/img/ball.png");
+    }
+    .Films {
+      background-image: url("../public/img/film.png");
+    }
+    .Science {
+      background-image: url("../public/img/nature.png");
+    }
+    .Mathematics {
+      background-image: url("../public/img/math.png");
+    }
+    .Computers {
+      background-image: url("../public/img/computer.png");
+    }
+    .History {
+      background-image: url("../public/img/history.png");
+    }
+  }
 }
 
 .answer--btn {

@@ -69,8 +69,56 @@ nav {
   color: #1d2951;
 }
 
-._categories {
-  border: 2px solid red;
+.categories {
+  flex-grow: 1;
+  background-color: #1d2951;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.categories .categories__icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.categories .categories__icons .categories__box {
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 14px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(116, 108, 192, 0.3);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto;
+}
+.categories .categories__icons a {
+  color: #f8f8ff;
+  text-decoration: none;
+}
+.categories .categories__icons .Sports {
+  background-image: url("../public/img/ball.png");
+}
+.categories .categories__icons .Films {
+  background-image: url("../public/img/film.png");
+}
+.categories .categories__icons .Science {
+  background-image: url("../public/img/nature.png");
+}
+.categories .categories__icons .Mathematics {
+  background-image: url("../public/img/math.png");
+}
+.categories .categories__icons .Computers {
+  background-image: url("../public/img/computer.png");
+}
+.categories .categories__icons .History {
+  background-image: url("../public/img/history.png");
 }
 
 .answer--btn {
