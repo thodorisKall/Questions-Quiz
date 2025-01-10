@@ -121,20 +121,16 @@ nav {
   background-image: url("../public/img/history.png");
 }
 
-.answer--btn {
-  background-color: #d3d3d3;
+.loader__wrap {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d2951;
 }
-
-.correct--btn {
-  background-color: #00a550;
-}
-
-.wrong--btn {
-  background-color: #fd5e53;
-}
-
-.loader {
-  color: #000;
+.loader__wrap .loader {
+  text-align: center;
+  color: #0abab5;
   width: 4px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -151,6 +147,18 @@ nav {
     box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
   }
 }
+.answer--btn {
+  background-color: #d3d3d3;
+}
+
+.correct--btn {
+  background-color: #00a550;
+}
+
+.wrong--btn {
+  background-color: #fd5e53;
+}
+
 /* Footer styling */
 footer {
   font-size: 10px;
