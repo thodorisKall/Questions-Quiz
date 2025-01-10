@@ -42,7 +42,11 @@ function Question() {
   }, [questionsUrl, currentIndex])
 
   if (questionsUrl.length === 0) {
-    return <div className='loader'></div>
+    return (
+      <div className='loader__wrap'>
+        <div className='loader'></div>
+      </div>
+    )
   }
 
   const handleNext = () => {
@@ -89,22 +93,22 @@ function Question() {
   }
 
   return (
-    <div>
+    <div className='questions'>
       <h3>Category: {categoryName}</h3>
-      <h3>Question</h3>
 
       <div>
         <div>
-          <h4>
-            {`${currentIndex + 1}#  ${decodeHtmlEntities(
-              questionsUrl[currentIndex].question
-            )}`}
-          </h4>
-          <h5>Answers</h5>
-          <div>
+          <div className='questions__text'>
+            <h3>Question {currentIndex + 1} out of 10</h3>
+            <h4>
+              {`  ${decodeHtmlEntities(questionsUrl[currentIndex].question)}`}
+            </h4>
+          </div>
+
+          <div className='questions__btns'>
             {shuffleAsnwers.map((answer) => {
               return (
-                <div key={answer}>
+                <div key={answer} className='questions__answers'>
                   <button
                     className={
                       isCorrect === null
@@ -126,7 +130,7 @@ function Question() {
           </div>
         </div>
       </div>
-      <div>
+      <div className='questions__navigation'>
         <button onClick={() => handlePrevious()} disabled={currentIndex === 0}>
           Previous
         </button>
