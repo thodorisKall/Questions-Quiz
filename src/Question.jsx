@@ -96,45 +96,46 @@ function Question() {
     <div className='questions'>
       <h3>Category: {categoryName}</h3>
 
-      <div>
-        <div>
-          <div className='questions__text'>
-            <h3>Question {currentIndex + 1} out of 10</h3>
-            <h4>
-              {`  ${decodeHtmlEntities(questionsUrl[currentIndex].question)}`}
-            </h4>
-          </div>
+      <div className='questions__wrap'>
+        <div className='questions__text'>
+          <h5>Question {currentIndex + 1} out of 10</h5>
+          <h2>
+            {`${decodeHtmlEntities(questionsUrl[currentIndex].question)}`}
+          </h2>
+        </div>
 
-          <div className='questions__btns'>
-            {shuffleAsnwers.map((answer) => {
-              return (
-                <div key={answer} className='questions__answers'>
-                  <button
-                    className={
-                      isCorrect === null
-                        ? "answer--btn"
-                        : answer === correctAnswer && showCorrectAnswer
-                        ? "correct--btn"
-                        : selectedAnswer === answer
-                        ? "wrong--btn"
-                        : "answer--btn"
-                    }
-                    onClick={handleAnswer}
-                    disabled={isCorrect !== null}
-                  >
-                    {decodeHtmlEntities(answer)}
-                  </button>
-                </div>
-              )
-            })}
-          </div>
+        <div className='questions__btns'>
+          {shuffleAsnwers.map((answer) => {
+            return (
+              <div key={answer} className='questions__answers'>
+                <button
+                  className={
+                    isCorrect === null
+                      ? "answer--btn"
+                      : answer === correctAnswer && showCorrectAnswer
+                      ? "correct--btn"
+                      : selectedAnswer === answer
+                      ? "wrong--btn"
+                      : "answer--btn"
+                  }
+                  onClick={handleAnswer}
+                  disabled={isCorrect !== null}
+                >
+                  {decodeHtmlEntities(answer)}
+                </button>
+              </div>
+            )
+          })}
         </div>
       </div>
+
       <div className='questions__navigation'>
         <button onClick={() => handlePrevious()} disabled={currentIndex === 0}>
           Previous
         </button>
-        <button onClick={() => handleNext()}>Next</button>
+        <button onClick={() => handleNext()} disabled={isCorrect === null}>
+          Next
+        </button>
       </div>
     </div>
   )
