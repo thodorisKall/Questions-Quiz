@@ -1,4 +1,5 @@
 @import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   padding: 0;
@@ -24,11 +25,40 @@
   flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", serif;
+}
+
 body {
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Roboto", serif;
+}
+
+.Sports {
+  background-image: url("../public/img/ball.png");
+}
+.Films {
+  background-image: url("../public/img/film.png");
+}
+.Science {
+  background-image: url("../public/img/nature.png");
+}
+.Mathematics {
+  background-image: url("../public/img/math.png");
+}
+.Computers {
+  background-image: url("../public/img/computer.png");
+}
+.History {
+  background-image: url("../public/img/history.png");
 }
 
 // Nav
@@ -110,25 +140,6 @@ nav {
       color: $white;
       text-decoration: none;
     }
-
-    .Sports {
-      background-image: url("../public/img/ball.png");
-    }
-    .Films {
-      background-image: url("../public/img/film.png");
-    }
-    .Science {
-      background-image: url("../public/img/nature.png");
-    }
-    .Mathematics {
-      background-image: url("../public/img/math.png");
-    }
-    .Computers {
-      background-image: url("../public/img/computer.png");
-    }
-    .History {
-      background-image: url("../public/img/history.png");
-    }
   }
 }
 
@@ -140,6 +151,15 @@ nav {
   flex-direction: column;
   justify-content: space-around;
 
+  .questions__category {
+    margin: 0 auto;
+    width: 80%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
+  }
+
   .questions__text {
     h5 {
       color: $cyan;
@@ -147,7 +167,7 @@ nav {
 
     h2 {
       margin: 0 auto;
-      color: $white;
+      color: $purple-white;
       margin-bottom: 58px;
       width: 70%;
     }
@@ -167,10 +187,12 @@ nav {
         height: 100px;
         border-radius: 12px;
         color: $dark-blue;
+        box-shadow: $dark-grey 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
       }
 
       .answer--btn {
-        background-color: $white;
+        background-color: $purple-white;
       }
 
       .correct--btn {
@@ -180,6 +202,20 @@ nav {
       .wrong--btn {
         background-color: $red;
       }
+    }
+  }
+
+  .questions__navigation {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      padding: 0px 8px;
+      min-width: 50px;
+      max-width: fit-content;
+      height: 28px;
     }
   }
 }
