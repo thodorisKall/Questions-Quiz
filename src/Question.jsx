@@ -79,6 +79,7 @@ function Question() {
     } else {
       setIsCorrect(false)
       setWrongAnswers(wrongAnswers + 1)
+      setShowCorrectAnswer(false)
     }
 
     setTimeout(() => {
@@ -94,7 +95,9 @@ function Question() {
 
   return (
     <div className='questions'>
-      <h3>Category: {categoryName}</h3>
+      <h3 className={`${categoryName} questions__category`}>
+        {/* Category: {categoryName} */}
+      </h3>
 
       <div className='questions__wrap'>
         <div className='questions__text'>
