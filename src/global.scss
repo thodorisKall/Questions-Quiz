@@ -60,6 +60,15 @@ body {
 .History {
   background-image: url("../public/img/history.png");
 }
+.lost {
+  background-image: url("../public/img/lost.png");
+}
+.win {
+  background-image: url("../public/img/win.png");
+}
+.draw {
+  background-image: url("../public/img/draw.png");
+}
 
 // Nav
 nav {
@@ -260,9 +269,49 @@ nav {
     box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
   }
 }
-// ----------------------
 
-/* Footer styling */
+//Results
+.results {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $dark-blue;
+  color: $purple-white;
+  h2 {
+    font-size: 48px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: auto;
+    background-size: 150px auto;
+    height: 250px;
+  }
+
+  .results__text {
+    h4 {
+      color: $cyan;
+    }
+
+    h3 {
+      font-size: 34px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $cyan;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #replay--icon {
+    font-size: 50px;
+  }
+}
+
+/* Footer  */
 footer {
   font-size: 10px;
   padding: 20px;
