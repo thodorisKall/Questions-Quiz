@@ -116,16 +116,16 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  gap: 50px;
 }
 .categories .categories__icons .categories__box {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   font-size: 14px;
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   background-color: rgba(116, 108, 192, 0.3);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -136,6 +136,14 @@ nav {
 .categories .categories__icons a {
   color: #f8f8ff;
   text-decoration: none;
+}
+.categories .categories__list label {
+  font-size: 20px;
+  color: #0abab5;
+  margin-right: 10px;
+}
+.categories .categories__list select {
+  font-size: 18px;
 }
 
 .questions {

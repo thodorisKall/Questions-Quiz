@@ -118,16 +118,16 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    gap: 50px;
 
     .categories__box {
-      padding-bottom: 5px;
+      padding-bottom: 10px;
       display: flex;
       flex-direction: column;
       justify-content: end;
       font-size: 14px;
-      width: 150px;
-      height: 150px;
+      width: 170px;
+      height: 170px;
       background-color: rgba($purple, 0.3);
       border-radius: 20px;
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -139,6 +139,18 @@ nav {
     a {
       color: $white;
       text-decoration: none;
+    }
+  }
+
+  .categories__list {
+    label {
+      font-size: 20px;
+      color: $cyan;
+      margin-right: 10px;
+    }
+
+    select {
+      font-size: 18px;
     }
   }
 }
