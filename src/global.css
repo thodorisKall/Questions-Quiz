@@ -79,6 +79,18 @@ body {
 nav {
   background-color: #1d2951;
 }
+nav .nav--btn {
+  color: #e6e6fa;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px;
+}
+nav .nav--btn a {
+  color: #e6e6fa;
+  margin-right: 5px;
+  text-decoration: none;
+}
 
 .starter {
   flex-grow: 1;
