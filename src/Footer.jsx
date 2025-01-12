@@ -10,11 +10,10 @@ function Footer() {
 
   return (
     <footer>
-      <div>
-        <h3 id='developed'>
-          Developed by <span>Thodoris Kallioras</span> 2025
-        </h3>
-      </div>
+      <h3 id='developed'>
+        Developed by <span>Thodoris Kallioras</span> 2025
+      </h3>
+
       <div className='footer__info'>
         <button id='info' onClick={openModal}>
           <SlInfo />

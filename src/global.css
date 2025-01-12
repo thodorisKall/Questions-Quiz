@@ -294,6 +294,7 @@ footer {
   background-color: #1d2951;
 }
 footer #developed {
+  font-size: 14px;
   color: #f8f8ff;
 }
 footer #developed span {
@@ -304,9 +305,11 @@ footer .footer__info {
   justify-content: space-between;
   align-items: center;
   width: 5%;
+  font-size: 14px;
+  color: #0abab5;
 }
 footer .footer__info #info {
-  font-size: 16px;
+  font-size: 24px;
   background-color: #007bff;
   color: #f8f8ff;
   border: none;
