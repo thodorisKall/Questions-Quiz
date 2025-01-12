@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# QuizWhiz - A React Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. The Goal of the Project
 
-## Available Scripts
+The goal of QuizWhiz is to create an engaging and fun quiz app where users can test their knowledge on a variety of topics. It allows users to select their preferred category and answer a set number of questions. The app evaluates the performance and displays results to encourage replayability.
 
-In the project directory, you can run:
+## 2. Live Demo
 
-### `npm start`
+You can explore QuizWhiz live here: [QuizWhiz Live](https://questions-quiz-three.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 3. Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+QuizWhiz is an interactive quiz game powered by the Open Trivia Database (OpenTDB) API.
 
-### `npm test`
+- Users can select a category from multiple options.
+- Each category offers 10 multiple-choice questions.
+- Every question has four possible answers, with only one being correct.
+- After answering all 10 questions, users receive results: **Win**, **Draw**, or **Lost**, based on their correct vs. incorrect answers.
+- Users can play again by selecting a new category.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4. What's the Outcome?
 
-### `npm run build`
+QuizWhiz provides a simple and fun user experience for anyone who loves quizzes. It encourages players to explore different categories and improve their scores while learning new trivia. The app is designed to make quiz-taking enjoyable and easy to navigate.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5. What's the Stack?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **HTML, CSS, JavaScript**: Core web technologies for structure and functionality.
+- **React**: Used for building the interactive user interface.
+- **SASS with BEM**: For maintainable and scalable styling.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 6. The Vision
 
-### `npm run eject`
+In future updates, QuizWhiz aims to offer more customization options for the quiz experience:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Choose Question Count**: Users will be able to select the number of questions per category (e.g., 10, 12, 15, or 20).
+- **Difficulty Levels**: Users can pick the difficulty (Easy, Medium, or Hard) to match their preferences and challenge level.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 7. Stage of the Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+QuizWhiz is currently **in progress**. The app is fully functional with the basic features, and future updates are planned to enhance the user experience and customization options.
