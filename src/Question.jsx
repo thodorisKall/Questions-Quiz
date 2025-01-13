@@ -124,7 +124,7 @@ function Question() {
                   onClick={handleAnswer}
                   disabled={isCorrect !== null}
                 >
-                  {decodeHtmlEntities(answer)}
+                  <p>{decodeHtmlEntities(answer)}</p>
                 </button>
               </div>
             )
