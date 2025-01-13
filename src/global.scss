@@ -446,7 +446,8 @@ footer {
   .questions {
     .questions__text {
       h2 {
-        font-size: 28px;
+        font-size: 26px;
+        width: 90%;
       }
     }
 
@@ -454,11 +455,12 @@ footer {
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 30px;
 
       .questions__answers {
         button {
-          width: 200px;
+          width: 250px;
           height: 70px;
           display: flex;
           justify-content: center;
