@@ -421,6 +421,27 @@ footer {
     width: 90%;
   }
 
+  // Categories
+  .categories {
+    .categories__icons {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 30px;
+
+      .categories__box {
+        width: 140px;
+        height: 140px;
+        font-size: 12px;
+        background-size: 80px auto;
+      }
+    }
+
+    .categories__list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   // Footer
   footer {
     align-items: center;

@@ -380,6 +380,21 @@ footer .footer__info #info:hover {
   .starter__img {
     width: 90%;
   }
+  .categories .categories__icons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .categories .categories__icons .categories__box {
+    width: 140px;
+    height: 140px;
+    font-size: 12px;
+    background-size: 80px auto;
+  }
+  .categories .categories__list {
+    display: flex;
+    flex-direction: column;
+  }
   footer {
     align-items: center;
     padding: 0;
