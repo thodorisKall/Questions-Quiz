@@ -374,4 +374,24 @@ footer .footer__info #info:hover {
 
 .close-modal-btn:hover {
   background-color: #a71d2a;
+}
+
+@media (max-width: 480px) {
+  .starter__img {
+    width: 90%;
+  }
+  footer {
+    align-items: center;
+    padding: 0;
+    padding: 20px;
+  }
+  footer #developed {
+    font-size: 10px;
+  }
+  footer .footer__info {
+    font-size: 10px;
+  }
+  footer .footer__info #info {
+    margin-right: 5px;
+  }
 }/*# sourceMappingURL=global.css.map */
