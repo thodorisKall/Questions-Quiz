@@ -441,6 +441,10 @@ footer {
 
 // media queries
 @media (max-width: 480px) {
+  body {
+    height: 100%;
+  }
+
   // Starter
   .starter__img {
     width: 90%;

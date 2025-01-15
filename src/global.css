@@ -405,6 +405,9 @@ footer .footer__info button #info:hover {
 }
 
 @media (max-width: 480px) {
+  body {
+    height: 100%;
+  }
   .starter__img {
     width: 90%;
   }
