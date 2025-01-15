@@ -44,7 +44,7 @@ function Categories() {
     },
     {
       url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
-      label: "General(Mix)",
+      label: "General",
     },
     {
       url: "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple",
