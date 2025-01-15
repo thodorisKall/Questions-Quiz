@@ -69,6 +69,21 @@ body {
 .draw {
   background-image: url("../public/img/draw.png");
 }
+.Games {
+  background-image: url("../public/img/games.png");
+}
+.General {
+  background-image: url("../public/img/general.png");
+}
+.Vehicles {
+  background-image: url("../public/img/vehicle.png");
+}
+.Music {
+  background-image: url("../public/img/music.png");
+}
+.Animals {
+  background-image: url("../public/img/animals.png");
+}
 
 // Nav
 nav {
@@ -189,7 +204,7 @@ nav {
   .questions__category {
     margin: 0 auto;
     width: 80%;
-    height: 100px;
+    height: 140px;
     background-repeat: no-repeat;
     background-position: top right;
     background-size: auto;
