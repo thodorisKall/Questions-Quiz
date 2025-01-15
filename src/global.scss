@@ -370,17 +370,19 @@ footer {
     font-size: 14px;
     color: $cyan;
 
-    #info {
-      font-size: 24px;
-      background-color: #007bff;
-      color: $white;
+    button {
+      background-color: transparent;
       border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
 
-    #info:hover {
-      background-color: #0056b3;
+      #info {
+        font-size: 24px;
+        color: $white;
+        cursor: pointer;
+      }
+
+      #info:hover {
+        color: $cyan;
+      }
     }
   }
 }
@@ -401,32 +403,40 @@ footer {
 .modal-box {
   background: $white;
   padding: 20px;
-  width: 300px;
+  width: 390px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
+
+  .close__btn {
+    display: flex;
+    justify-content: end;
+  }
 }
 
 .modal-box h2 {
   margin-top: 0;
+  font-size: 24px;
 }
 
 .modal-box p {
+  font-size: 22px;
   margin: 10px 0;
 }
 
 .close-modal-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #dc3545;
-  color: white;
+  color: $cyan;
   border: none;
-  border-radius: 5px;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .close-modal-btn:hover {
   background-color: #a71d2a;
+  color: $white;
+  border-radius: 5px;
 }
 
 // media queries
@@ -507,5 +517,13 @@ footer {
         margin-right: 5px;
       }
     }
+  }
+
+  // modal
+  .modal-box {
+    padding: 9px;
+    width: 75%;
+    height: 70%;
+    overflow-y: scroll;
   }
 }

@@ -340,16 +340,17 @@ footer .footer__info {
   font-size: 14px;
   color: #0abab5;
 }
-footer .footer__info #info {
-  font-size: 24px;
-  background-color: #007bff;
-  color: #f8f8ff;
+footer .footer__info button {
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
+}
+footer .footer__info button #info {
+  font-size: 24px;
+  color: #f8f8ff;
   cursor: pointer;
 }
-footer .footer__info #info:hover {
-  background-color: #0056b3;
+footer .footer__info button #info:hover {
+  color: #0abab5;
 }
 
 /* Modal styling */
@@ -368,32 +369,39 @@ footer .footer__info #info:hover {
 .modal-box {
   background: #f8f8ff;
   padding: 20px;
-  width: 300px;
+  width: 390px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
+.modal-box .close__btn {
+  display: flex;
+  justify-content: end;
+}
 
 .modal-box h2 {
   margin-top: 0;
+  font-size: 24px;
 }
 
 .modal-box p {
+  font-size: 22px;
   margin: 10px 0;
 }
 
 .close-modal-btn {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #dc3545;
-  color: white;
+  color: #0abab5;
   border: none;
-  border-radius: 5px;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .close-modal-btn:hover {
   background-color: #a71d2a;
+  color: #f8f8ff;
+  border-radius: 5px;
 }
 
 @media (max-width: 480px) {
@@ -450,5 +458,11 @@ footer .footer__info #info:hover {
   }
   footer .footer__info #info {
     margin-right: 5px;
+  }
+  .modal-box {
+    padding: 9px;
+    width: 75%;
+    height: 70%;
+    overflow-y: scroll;
   }
 }/*# sourceMappingURL=global.css.map */
