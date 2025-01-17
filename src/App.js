@@ -7,6 +7,7 @@ import Question from "./Question"
 import Nav from "./Nav"
 import Results from "./Results"
 import Footer from "./Footer"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </div>
           <Footer />
         </div>
+        <Analytics />
       </Router>
     </div>
   )
