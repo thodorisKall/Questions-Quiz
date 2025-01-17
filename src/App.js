@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     <div className='App'>
+      <Analytics />
       <Router>
         <div className='app__main'>
           <Nav />
@@ -25,7 +26,6 @@ function App() {
           </div>
           <Footer />
         </div>
-        <Analytics />
       </Router>
     </div>
   )
