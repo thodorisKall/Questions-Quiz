@@ -17,15 +17,11 @@ function Categories() {
       url: "https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple",
       label: "Science",
     },
+    {
+      url: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
+      label: "Music",
+    },
 
-    {
-      url: "https://opentdb.com/api.php?amount=10&category=19&difficulty=easy&type=multiple",
-      label: "Mathematics",
-    },
-    {
-      url: "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
-      label: "Computers",
-    },
     {
       url: "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple",
       label: "History",
@@ -39,8 +35,8 @@ function Categories() {
       label: "Animals",
     },
     {
-      url: "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple",
-      label: "Music",
+      url: "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
+      label: "Computers",
     },
     {
       url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
