@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom"
 function Categories() {
   const apisData = [
     {
-      url: "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple",
-      label: "Sports",
+      url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
+      label: "General",
     },
 
     {
@@ -37,10 +37,6 @@ function Categories() {
     {
       url: "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
       label: "Computers",
-    },
-    {
-      url: "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple",
-      label: "General",
     },
     {
       url: "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple",
